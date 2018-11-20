@@ -1,0 +1,13 @@
+{% extends 'tail/pageTail0.html' %}
+
+
+{% block title %}
+	Fox
+{% endblock %}
+
+{% block content %}
+	<h1 class="mb-5">Posts:</h1>
+  {% for post in posts %}
+    {% include 'tail/includes/post_card_template.html' %}
+  {% endfor %}
+{% endblock %}
