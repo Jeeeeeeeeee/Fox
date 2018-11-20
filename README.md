@@ -1,1 +1,1 @@
-ref: refs/heads/master
+Hello. This is my first project Python: Framework 'Django'
