@@ -19,7 +19,10 @@ from django.urls import include
 
 # from .views import hello
 
+from .views import redirect_fox
+
 urlpatterns = [
+	path('', redirect_fox),
     path('admin/', admin.site.urls),
-    path('tail/', include('tail.urls'))
+    path('tail/', include('tail.urls')),
 ]

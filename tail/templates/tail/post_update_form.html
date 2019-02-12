@@ -1,0 +1,27 @@
+{% extends 'tail/pageTail0.html' %}
+
+{% block title %}
+    Edit Post - "{{ post.title }}" {{ block.super }}
+{% endblock %}
+
+
+{% block content %}
+    <form class="" action="{{ post.get_update_url }}" method="post">
+        {% csrf_token %}
+
+        {% for field in form %}
+            <div class="form-group">
+            	{% if field.errors %}
+            	    <div class="allert-dangers">
+            	    	{{ field.errors }}
+            	    </div>
+            	{% endif %}
+            	{{ field.label }}
+            	{{ field }}
+            </div>
+        {% endfor %}
+        <button type="submint" name="button" class="btn btn-primary">Update Post</button>
+    </form>
+
+
+{% endblock %}
